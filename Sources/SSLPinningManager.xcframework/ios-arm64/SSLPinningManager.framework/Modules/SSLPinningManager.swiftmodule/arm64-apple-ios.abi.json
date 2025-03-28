@@ -1,0 +1,356 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SSLPinningManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "SSLPinningManager"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "SSLPinningManager"
+      },
+      {
+        "kind": "Var",
+        "name": "SSLPingKeys",
+        "printedName": "SSLPingKeys",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:17SSLPinningManager11SSLPingKeysSSvp",
+        "mangledName": "$s17SSLPinningManager11SSLPingKeysSSvp",
+        "moduleName": "SSLPinningManager",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:17SSLPinningManager11SSLPingKeysSSvg",
+            "mangledName": "$s17SSLPinningManager11SSLPingKeysSSvg",
+            "moduleName": "SSLPinningManager",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "Var",
+        "name": "SSLSubDomains",
+        "printedName": "SSLSubDomains",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:17SSLPinningManager13SSLSubDomainsSSvp",
+        "mangledName": "$s17SSLPinningManager13SSLSubDomainsSSvp",
+        "moduleName": "SSLPinningManager",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:17SSLPinningManager13SSLSubDomainsSSvg",
+            "mangledName": "$s17SSLPinningManager13SSLSubDomainsSSvg",
+            "moduleName": "SSLPinningManager",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SSLPinningController",
+        "printedName": "SSLPinningController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SSLPinningController",
+                "printedName": "SSLPinningManager.SSLPinningController",
+                "usr": "s:17SSLPinningManager0A10ControllerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SSLPinningManager0A10ControllerC6sharedACvpZ",
+            "mangledName": "$s17SSLPinningManager0A10ControllerC6sharedACvpZ",
+            "moduleName": "SSLPinningManager",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SSLPinningController",
+                    "printedName": "SSLPinningManager.SSLPinningController",
+                    "usr": "s:17SSLPinningManager0A10ControllerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SSLPinningManager0A10ControllerC6sharedACvgZ",
+                "mangledName": "$s17SSLPinningManager0A10ControllerC6sharedACvgZ",
+                "moduleName": "SSLPinningManager",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setCofiGuration",
+            "printedName": "setCofiGuration(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [Swift.String : [Swift.String]]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [Swift.String]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SSLPinningManager0A10ControllerC15setCofiGuration13configurationySDySSSDySSSaySSGGG_tF",
+            "mangledName": "$s17SSLPinningManager0A10ControllerC15setCofiGuration13configurationySDySSSDySSSaySSGGG_tF",
+            "moduleName": "SSLPinningManager",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "evaluateTrust",
+            "printedName": "evaluateTrust(challenge:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLAuthenticationChallenge",
+                "printedName": "Foundation.URLAuthenticationChallenge",
+                "usr": "c:objc(cs)NSURLAuthenticationChallenge"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SSLPinningManager0A10ControllerC13evaluateTrust9challenge10completionySo28NSURLAuthenticationChallengeC_ySbctF",
+            "mangledName": "$s17SSLPinningManager0A10ControllerC13evaluateTrust9challenge10completionySo28NSURLAuthenticationChallengeC_ySbctF",
+            "moduleName": "SSLPinningManager",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17SSLPinningManager0A10ControllerC",
+        "mangledName": "$s17SSLPinningManager0A10ControllerC",
+        "moduleName": "SSLPinningManager",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "Array",
+      "offset": 191,
+      "length": 154,
+      "value": "[0x30, 0x82, 0x01, 0x22, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x82, 0x01, 0x0f, 0x00]"
+    },
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "Array",
+      "offset": 388,
+      "length": 154,
+      "value": "[0x30, 0x82, 0x01, 0xA2, 0x30, 0x0D, 0x06, 0x09, 0x2A, 0x86, 0x48, 0x86, 0xF7, 0x0D, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x82, 0x01, 0x8F, 0x00]"
+    },
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "Array",
+      "offset": 585,
+      "length": 154,
+      "value": "[0x30, 0x82, 0x02, 0x22, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x82, 0x02, 0x0f, 0x00]"
+    },
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "Array",
+      "offset": 789,
+      "length": 170,
+      "value": "[0x30, 0x59, 0x30, 0x13, 0x06, 0x07, 0x2a, 0x86, 0x48, 0xce, 0x3d, 0x02, 0x01, 0x06, 0x08, 0x2a, 0x86, 0x48, 0xce, 0x3d, 0x03, 0x01, 0x07, 0x03, 0x42, 0x00]"
+    },
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "Array",
+      "offset": 1009,
+      "length": 148,
+      "value": "[0x30, 0x76, 0x30, 0x10, 0x06, 0x07, 0x2a, 0x86, 0x48, 0xce, 0x3d, 0x02, 0x01, 0x06, 0x05, 0x2b, 0x81, 0x04, 0x00, 0x22, 0x03, 0x62, 0x00]"
+    },
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1184,
+      "length": 13,
+      "value": "\"sslpingkeys\""
+    },
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1225,
+      "length": 15,
+      "value": "\"sslsubdomains\""
+    },
+    {
+      "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10560,
+      "length": 1,
+      "value": "1"
+    }
+  ]
+}

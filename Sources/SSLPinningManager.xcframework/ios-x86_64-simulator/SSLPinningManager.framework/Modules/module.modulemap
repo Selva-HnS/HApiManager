@@ -1,0 +1,6 @@
+framework module SSLPinningManager {
+  umbrella header "SSLPinningManager.h"
+  export *
+
+  module * { export * }
+}
