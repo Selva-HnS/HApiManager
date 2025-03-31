@@ -112,7 +112,7 @@ public enum HTTPMethod: String {
             
             // 2. Make this process in main thread. (you can do this in background thread as well)
                 .receive(on: DispatchQueue.main)
-
+            
             // 3. Use 'tryMap'(Operator) to get the data from the result
                 .tryMap({ (data, response) -> (Int, Data) in
                     guard let response = response as? HTTPURLResponse,
@@ -139,7 +139,7 @@ public enum HTTPMethod: String {
             // 6. saving the subscriber into an AnyCancellable Set (without this step this won't work)
                 .store(in: &cancellables)
         }
-
+    
     //FuturePublisher with return T
     
     public func request<T: Codable>(
@@ -226,7 +226,4 @@ public enum HTTPMethod: String {
             // 6. saving the subscriber into an AnyCancellable Set (without this step this won't work)
                 .store(in: &cancellables)
         }
-    
-
-    
 }
