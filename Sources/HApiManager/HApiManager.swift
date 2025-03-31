@@ -5,7 +5,7 @@ import Foundation
 import Combine
 import SSLPinningManager
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     /// `CONNECT` method.
     case connect = "CONNECT"
     /// `DELETE` method.
@@ -28,8 +28,8 @@ enum HTTPMethod: String {
     case trace = "TRACE"
 }
 
-@MainActor class SSLPinningDelegate: NSObject, URLSessionDelegate {
-    nonisolated func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+@MainActor open class SSLPinningDelegate: NSObject, URLSessionDelegate {
+    nonisolated public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         SSLPinningController.shared.evaluateTrust(challenge: challenge, completion: { (status) in
             if status == false {
                 completionHandler(.cancelAuthenticationChallenge, nil)
@@ -40,15 +40,15 @@ enum HTTPMethod: String {
     }
 }
 
-@MainActor class MyAPIManager {
-    static let sharedInstance = MyAPIManager()
+@MainActor open class MyAPIManager {
+    static public let sharedInstance = MyAPIManager()
     private var cancellables = Set<AnyCancellable>()
     
     private init() {}
     
     //DataTaskPusblisher with return data
     
-    func request(
+    public func request(
         endpoint: String,
         method: HTTPMethod = .get,
         parameters: [String: Any]? = nil,
@@ -142,7 +142,7 @@ enum HTTPMethod: String {
 
     //FuturePublisher with return data
     
-    func request(
+    public func request(
         endpoint: String,
         method: HTTPMethod = .get,
         parameters: [String: Any]? = nil,
@@ -221,7 +221,7 @@ enum HTTPMethod: String {
     
     //FuturePublisher with return T
     
-    func request<T: Decodable>(
+    public func request<T: Decodable>(
         endpoint: String,
         method: HTTPMethod = .get,
         parameters: [String: Any]? = nil,
