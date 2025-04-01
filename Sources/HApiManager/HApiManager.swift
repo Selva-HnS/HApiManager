@@ -54,7 +54,6 @@ public enum HTTPMethod: String {
         parameters: [String: Any]? = nil,
         headers: [String: String]? = nil,
         ssldomainkeys : [String: [String:[String]]]? = nil,
-        token: String? = nil,
         completion: @escaping (Result<(Int, Data), Error>) -> Void)  {
             
             // Add Endpoint url
@@ -66,12 +65,7 @@ public enum HTTPMethod: String {
             // Define request
             var request = URLRequest(url: url)
             request.httpMethod = method.rawValue
-            
-            // Add Token
-            if let token = token, token != "" {
-                request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-            }
-            
+                        
             // Add Headers
             if headers != nil {
                 headers?.forEach { key, value in
@@ -148,7 +142,6 @@ public enum HTTPMethod: String {
         parameters: [String: Any]? = nil,
         headers: [String: String]? = nil,
         ssldomainkeys : [String: [String:[String]]]? = nil,
-        token: String? = nil,
         completion: @escaping (Result<T, Error>) -> Void) {
             
             // Add Endpoint url
@@ -160,12 +153,7 @@ public enum HTTPMethod: String {
             // Define request
             var request = URLRequest(url: url)
             request.httpMethod = method.rawValue
-            
-            // Add Token
-            if let token = token, token != "" {
-                request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-            }
-            
+                        
             // Add Headers
             if headers != nil {
                 headers?.forEach { key, value in
