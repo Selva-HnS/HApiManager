@@ -51,6 +51,7 @@ public enum HTTPMethod: String {
     public func request(
         endpoint: String,
         method: HTTPMethod = .get,
+        soapMessage: String? = nil,
         parameters: [String: Any]? = nil,
         headers: [String: String]? = nil,
         ssldomainkeys : [String: [String:[String]]]? = nil,
@@ -75,6 +76,11 @@ public enum HTTPMethod: String {
                 request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             }
             
+            // Add Soap Message
+            if let soaptxt = soapMessage, soaptxt != "" {
+                request.httpBody = soaptxt.data(using: .utf8)!
+            }
+
             // Add Parameters (Query for GET, Body for others)
             if let parameters = parameters {
                 if method == .get {
