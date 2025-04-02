@@ -55,6 +55,8 @@ public enum HTTPMethod: String {
         parameters: [String: Any]? = nil,
         headers: [String: String]? = nil,
         ssldomainkeys : [String: [String:[String]]]? = nil,
+        timeIntervalRequest: Double = 30.0,
+        timeIntervalResource: Double = 60.0,
         completion: @escaping (Result<(Int, Data), Error>) -> Void)  {
             
             // Add Endpoint url
@@ -103,7 +105,9 @@ public enum HTTPMethod: String {
                 configuration.urlCache = cache
                 configuration.requestCachePolicy = .reloadIgnoringLocalCacheData // Disable cache
                 configuration.connectionProxyDictionary = nil
-                
+                configuration.timeoutIntervalForRequest = timeIntervalRequest
+                configuration.timeoutIntervalForResource = timeIntervalResource
+
                 return URLSession(configuration: configuration, delegate: SSLPinningDelegate(), delegateQueue: OperationQueue())
             }()
             
@@ -148,6 +152,8 @@ public enum HTTPMethod: String {
         parameters: [String: Any]? = nil,
         headers: [String: String]? = nil,
         ssldomainkeys : [String: [String:[String]]]? = nil,
+        timeIntervalRequest: Double = 30.0,
+        timeIntervalResource: Double = 60.0,
         completion: @escaping (Result<T, Error>) -> Void) {
             
             // Add Endpoint url
@@ -191,7 +197,9 @@ public enum HTTPMethod: String {
                 configuration.urlCache = cache
                 configuration.requestCachePolicy = .reloadIgnoringLocalCacheData // Disable cache
                 configuration.connectionProxyDictionary = nil
-                
+                configuration.timeoutIntervalForRequest = timeIntervalRequest
+                configuration.timeoutIntervalForResource = timeIntervalResource
+
                 return URLSession(configuration: configuration, delegate: SSLPinningDelegate(), delegateQueue: OperationQueue())
             }()
             
