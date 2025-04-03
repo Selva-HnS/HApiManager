@@ -27,8 +27,7 @@ APIManager relies on users to create `MyAPIManager` types relevent to the RESTfu
 
 ### Making an MyAPIManager 
 
-An MyAPIManager only needs to conform to one method  `request(
-        endpoint: String,
+An MyAPIManager only needs to conform to one method  `request(endpoint: String,
         method: HTTPMethod = .get,
         soapMessage: String? = nil,
         parameters: [String: Any]? = nil,
