@@ -84,9 +84,11 @@ An MyAPIManager is made up of 11 components.
     headers: ["Content-Type": "application/x-www-form-urlencoded"]
 ```
 
-6. `ssldomainkeys` to be sent alongside the `SSLPinning` for secure `MyAPIManager`.
+6. `ssldomainkeys` to be sent alongside the `SSLPinning` for secure `MyAPIManager`. Please import SSLPinningManager
 
 ```swift
+    import SSLPinningManager
+
     ssldomainkeys: [
             "savwconnect.com": [SSLPingKeys:[
                 "provide public key"
