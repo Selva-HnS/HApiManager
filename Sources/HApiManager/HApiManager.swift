@@ -117,6 +117,7 @@ struct Media {
             request.httpMethod = method.rawValue
                         
             // Add Headers
+            var isdefault: Bool = false
             var urlencoded : Bool = false
             let boundary = "Boundary-\(UUID().uuidString)"
 
@@ -127,6 +128,9 @@ struct Media {
                             request.addValue(value, forHTTPHeaderField: key)
                         }
                     } else {
+                        if value.contains("application/json") {
+                            isdefault = true
+                        }
                         if value.contains("x-www-form-urlencoded") {
                             urlencoded = true
                         }
@@ -142,9 +146,15 @@ struct Media {
                 request.httpBody = soaptxt.data(using: .utf8)!
             }
 
+            
             // Add multipart/form-data
             if (image != nil || fileurl != nil) {
                 request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+            } else {
+                // Add default Content-Type
+                if !isdefault {
+                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                }
             }
 
             // Add Image
