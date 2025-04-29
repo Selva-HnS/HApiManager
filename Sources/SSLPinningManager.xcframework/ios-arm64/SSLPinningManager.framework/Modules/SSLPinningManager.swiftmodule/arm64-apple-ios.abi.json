@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "SSLPinningManager",
+    "printedName": "SSLPinningManager",
     "children": [
       {
         "kind": "Import",
@@ -144,6 +144,7 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "isLet": true,
@@ -232,6 +233,7 @@
             "mangledName": "$s17SSLPinningManager0A10ControllerC15setCofiGuration13configurationySDySSSDySSSaySSGGG_tF",
             "moduleName": "SSLPinningManager",
             "declAttributes": [
+              "Custom",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -255,7 +257,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Bool) -> ()",
+                "printedName": "(Swift.Bool, [Swift.String]) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -264,18 +266,40 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, [Swift.String])",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:17SSLPinningManager0A10ControllerC13evaluateTrust9challenge10completionySo28NSURLAuthenticationChallengeC_ySbctF",
-            "mangledName": "$s17SSLPinningManager0A10ControllerC13evaluateTrust9challenge10completionySo28NSURLAuthenticationChallengeC_ySbctF",
+            "usr": "s:17SSLPinningManager0A10ControllerC13evaluateTrust9challenge10completionySo28NSURLAuthenticationChallengeC_ySb_SaySSGtYbctF",
+            "mangledName": "$s17SSLPinningManager0A10ControllerC13evaluateTrust9challenge10completionySo28NSURLAuthenticationChallengeC_ySb_SaySSGtYbctF",
             "moduleName": "SSLPinningManager",
             "declAttributes": [
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -288,9 +312,33 @@
         "moduleName": "SSLPinningManager",
         "isOpen": true,
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "Custom"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -348,7 +396,7 @@
     {
       "filePath": "\/Users\/apple12\/Documents\/SSLPinningManager\/SSLPinningManager\/SSLPinningManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 10560,
+      "offset": 10536,
       "length": 1,
       "value": "1"
     }
