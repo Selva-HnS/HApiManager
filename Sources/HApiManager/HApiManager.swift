@@ -73,14 +73,18 @@ struct Media {
 }
 
 @MainActor class SSLPinningDelegate: NSObject, URLSessionDelegate {
-    nonisolated func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        SSLPinningController.shared.evaluateTrust(challenge: challenge, completion: { (status) in
-            if status == false {
-                completionHandler(.cancelAuthenticationChallenge, nil)
-            } else {
-                completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
+    nonisolated func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @Sendable(URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        Task {
+            await MainActor.run {
+                SSLPinningController.shared.evaluateTrust(challenge: challenge, completion: { (status,keys) in
+                    if status == false {
+                        completionHandler(.cancelAuthenticationChallenge, nil)
+                    } else {
+                        completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
+                    }
+                })
             }
-        })
+        }
     }
 }
 
