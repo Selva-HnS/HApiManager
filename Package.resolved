@@ -1,0 +1,15 @@
+{
+  "originHash" : "24363401c1fb79d7bf9e05e8b68f057f3dcd4c47e8dcbb11cd5a99cb8fa07f35",
+  "pins" : [
+    {
+      "identity" : "sslpinningmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Selva-HnS/SSLPinningManager.git",
+      "state" : {
+        "revision" : "47f81b7d9611d25db66af8b12bc157df9e46d253",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}
