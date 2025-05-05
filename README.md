@@ -8,7 +8,7 @@ APIManager is a framework for abstracting RESTful API requests.
 - Swift 6.0+
 
 ### Notes
-- APIManager 0.0.1 is the last version that Swift 6 support
+- APIManager 1.0.1 is the last version that Swift 6 support
 
 ## Installation
 
@@ -19,7 +19,7 @@ Once you have your Swift package set up, adding APIManager as a dependency is as
 
 ```swift
 dependencies: [
-    .Package(url: "https://github.com/Selva-HnS/HApiManager.git", from: "0.0.1")
+    .Package(url: "https://github.com/Selva-HnS/HApiManager.git", from: "1.0.1")
 ]
 ```
 ## Usage
